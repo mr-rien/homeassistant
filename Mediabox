@@ -1,0 +1,420 @@
+type: conditional
+conditions:
+  - entity: media_player.mediabox
+    state: playing
+card:
+  type: grid
+  cards:
+    - type: grid
+      cards:
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: Guide
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:television-guide
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: MediaTopMenu
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:home
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: TV
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:cash-refund
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+      square: false
+      columns: 3
+    - type: grid
+      cards:
+        - type: button
+          tap_action:
+            action: none
+          hold_action:
+            action: none
+          show_icon: false
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: ArrowUp
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:arrow-up-bold
+          show_name: false
+          show_state: false
+        - type: button
+          tap_action:
+            action: none
+          hold_action:
+            action: none
+          show_icon: false
+      square: false
+      columns: 3
+    - type: grid
+      cards:
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: ArrowLeft
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:arrow-left-bold
+          show_name: false
+          show_state: false
+        - type: button
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: Enter
+            target: {}
+          entity: media_player.mediabox
+          show_name: true
+          show_state: false
+          name: OK
+          show_icon: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: ArrowRight
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:arrow-right-bold
+          show_name: false
+          show_state: false
+      square: false
+      columns: 3
+    - type: grid
+      cards:
+        - type: button
+          tap_action:
+            action: none
+          hold_action:
+            action: none
+          show_icon: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: ArrowDown
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:arrow-down-bold
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: ChannelUp
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:chevron-up
+          show_name: false
+          show_state: false
+      square: false
+      columns: 3
+    - type: grid
+      cards:
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: Escape
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:keyboard-backspace
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: MediaRecord
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:record
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: ChannelDown
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:chevron-down
+          show_name: false
+          show_state: false
+      square: false
+      columns: 3
+    - type: grid
+      cards:
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: MediaRewind
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:rewind
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: MediaPlayPause
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:play-pause
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: MediaFastForward
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:fast-forward
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+      square: false
+      columns: 3
+    - type: grid
+      cards:
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: 1
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:numeric-1
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: 2
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:numeric-2
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: 3
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:numeric-3
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+      square: false
+      columns: 3
+    - type: grid
+      cards:
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: 4
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:numeric-4
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: 5
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:numeric-5
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: 6
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:numeric-6
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+      square: false
+      columns: 3
+    - type: grid
+      cards:
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: 7
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:numeric-7
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: 8
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:numeric-8
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: 9
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:numeric-9
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+      square: false
+      columns: 3
+    - type: grid
+      cards:
+        - type: button
+          tap_action:
+            action: none
+          hold_action:
+            action: none
+          show_icon: false
+        - type: custom:button-card
+          tap_action:
+            action: call-service
+            service: arris_dcx960.remote_key_press
+            service_data:
+              entity_id: media_player.mediabox
+              remote_key: 0
+            target: {}
+          entity: media_player.mediabox
+          icon: mdi:numeric-0
+          color_type: icon
+          color: auto
+          show_name: false
+          show_state: false
+        - type: button
+          tap_action:
+            action: none
+          hold_action:
+            action: none
+          show_icon: false
+      square: false
+      columns: 3
+  square: false
+  columns: 1
+  view_layout:
+    position: sidebar
+view_layout:
+  position: sidebar
